@@ -1,4 +1,4 @@
-import { createLogger, format, transports } from 'winston'
+import { createLogger, format, Logger, transports } from 'winston'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -6,7 +6,11 @@ const { colorize, combine, errors, printf, timestamp } = format
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-function buildDevLogger() {
+/**
+ * buildDevLogger
+ * @description Build the development logger
+ */
+function buildDevLogger(): Logger {
   const logFormat = printf(
     ({ level, message, stack, timestamp }) =>
       `${timestamp} [${level}]: ${stack || message}`

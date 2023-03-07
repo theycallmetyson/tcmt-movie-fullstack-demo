@@ -1,6 +1,11 @@
 import axios, { AxiosResponse } from 'axios'
 import logger from '../config/winston/winston-setup.js'
 
+/**
+ * Get all movies from the movie service
+ * @param page
+ * @returns
+ */
 async function get(page) {
   let response: AxiosResponse<any, any>
   try {
@@ -15,6 +20,9 @@ async function get(page) {
   return response
 }
 
+/**
+ * Movie service
+ */
 export const movieService = {
   get
 }
