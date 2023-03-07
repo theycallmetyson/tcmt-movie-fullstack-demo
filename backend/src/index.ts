@@ -6,8 +6,8 @@ import cluster from 'cluster'
 import helmet from 'helmet'
 import bodyParser from 'body-parser'
 
-import logger from './config/winston/winstonSetup.js'
-import swagger from './middlewares/swagger/swaggerSetup.js'
+import logger from './config/winston/winston-setup.js'
+import router from './routes/main-router.js'
 
 const app: Application = express()
 const PORT = process.env.PORT || 3000
@@ -36,8 +36,7 @@ if (cluster.isPrimary) {
   app.use(helmet())
   app.use(compression())
   app.use(express.json())
-
-  swagger(app)
+  app.use('/api', router)
 
   app.listen(PORT, () => {
     logger.info(`Server is running on PORT ${PORT}...`)

@@ -1,8 +1,8 @@
-# M.E.R.N. app with TS, Vite and Vitest ready to deploy into Docker container.
+# Movie fullstack demo app with TS, Vite and Vitest ready to deploy into Docker container.
 
-This is a simple boilerplate with [React](https://reactjs.org/) as frontend, [Express](https://expressjs.com/) & [Node](https://nodejs.org/en/) as backend and [Mongodb](https://www.mongodb.com/) as database with [Redis](https://redis.io/) in between. The whole project is using [Typescript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/) and [Vitest](https://vitest.dev/) as test framework.
+This is a simple demo of a movie fullstack app with [React](https://reactjs.org/) as frontend, [Express](https://expressjs.com/) & [Node](https://nodejs.org/en/) as backend and [Mongodb](https://www.mongodb.com/) as database with [Redis](https://redis.io/) in between. The whole project is using [Typescript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/) and [Vitest](https://vitest.dev/) as test framework.
 
-This boilerplate also utilises [Husky](https://typicode.github.io/husky/#/) and [Commitlint](https://commitlint.js.org/#/) to tidy up the commits.
+This simple demo of a movie fullstack app also utilises [Husky](https://typicode.github.io/husky/#/) and [Commitlint](https://commitlint.js.org/#/) to tidy up the commits.
 
 ## Installation
 
