@@ -1,4 +1,4 @@
-import { Request, response, Response } from 'express'
+import { Request, Response } from 'express'
 import { movieService } from '../services/movie-service.js'
 
 /**
@@ -8,9 +8,8 @@ import { movieService } from '../services/movie-service.js'
  * @returns
  */
 const getAllMovies = async (req: Request, res: Response) => {
-  const page = req.query.page
-  const movie = await movieService.get(page)
-  return res.json(movie.data)
+  const movie = await movieService.get(req, res)
+  return res.json(movie)
 }
 
 /**
