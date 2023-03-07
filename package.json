@@ -1,0 +1,58 @@
+{
+  "scripts": {
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "plugin:sort/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "sort",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sort": "^2.4.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  }
+}
