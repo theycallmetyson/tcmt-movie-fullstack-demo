@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/theycallmetyson/tcmt-movie-fullstack-demo"
   },
   "keywords": [
     "none"
   ],
   "author": "Tyson La",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "nodemonConfig": {
     "execMap": {
       "ts": "ts-node-esm"
